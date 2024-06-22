@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.8.3)
 project(uav_ugv_collaboration_module)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --std=gnu++11 -fpic -pthread -march=native") 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --std=gnu++17 -g -fpic -pthread -march=native") 
 set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
 option(BUILD_WITH_PCL "Build with ad-hoc PCL library" off)

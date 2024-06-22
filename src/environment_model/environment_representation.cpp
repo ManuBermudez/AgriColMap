@@ -71,7 +71,7 @@ PCLptXYZRGB EnvironmentRepresentation::computeAveragePoint(std::vector<PCLptXYZR
             float dist = ( nom_pt - pt.getVector3fMap().head(2) ).norm();
             float weight = 1 / exp ( dist / den );
             //setprecision(10);
-            //std::cerr << setprecision(10) << nom_pt.transpose() << " " << pt.getVector3fMap().head(2).transpose() << " " << dist << " " << 1 / exp ( dist / (2.0 * 0.04 * 0.04) )  << "\n";
+            // std::cerr << setprecision(10) << nom_pt.transpose() << " " << pt.getVector3fMap().head(2).transpose() << " " << dist << " " << 1 / exp ( dist / (2.0 * 0.04 * 0.04) )  << "\n";
             sum += weight;
             x += pt.x*weight;
             y += pt.y*weight;
@@ -89,8 +89,8 @@ PCLptXYZRGB EnvironmentRepresentation::computeAveragePoint(std::vector<PCLptXYZR
         out_pt.r = (int)(r/sum);
         out_pt.g = (int)(g/sum);
         out_pt.b = (int)(b/sum);
-        return out_pt;
     }
+    return out_pt;
 }
 
 void EnvironmentRepresentation::computeMMGridMap(){

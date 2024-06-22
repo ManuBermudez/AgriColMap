@@ -73,7 +73,7 @@ target_include_directories(Library-C++
     $<INSTALL_INTERFACE:include>
     ${EIGEN3_INCLUDE_DIR}
     )
-target_compile_options(Library-C++ PUBLIC -std=c++11)
+target_compile_options(Library-C++ PUBLIC -g -std=c++17)
 if(WITH_FGT)
     target_link_libraries(Library-C++ PUBLIC Fgt::Library-C++)
     target_compile_definitions(Library-C++ PUBLIC CPD_WITH_FGT)
